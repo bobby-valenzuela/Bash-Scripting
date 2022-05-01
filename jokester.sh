@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Author: Bobby Valenzuela
+# Created: Feb 28th 2022
+
+# Description:
+# Downloads five jokes from a free API and stores them into a csv.
+# Will append to the csv if ran multiple times
+
+# Usage ./jokester.sh
+
 # Add CSV Headers (if no csv)
 [[ ! -e jokes.csv ]] && touch jokes.csv && chmod 777 jokes.csv && output_csv="Date,Joke\n"
 
