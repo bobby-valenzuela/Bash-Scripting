@@ -22,3 +22,5 @@ Preferred places to save said scripts:
   
 Then just source your login script
 Example: `. ~/.bashrc`
+
+Then you can just call your script with `bash -e myscript.sh` or sh `myscript.sh`
