@@ -1,4 +1,4 @@
-# Cool Bash Scripts
+# Bash Scripts
 
 A collection of some bash scripts I've created, tweaked, or compiled from various sources.
 
