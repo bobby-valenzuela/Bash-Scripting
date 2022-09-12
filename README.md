@@ -25,6 +25,6 @@ Example: `. ~/.bashrc`
 
 Then you can just call your script as you would a normal command
 
-Otherwise you could call your script with `.myscript.sh` (assuming you've added the bash location in the shebang) or with the bash command directly with `bash myscript.sh`/`bash -s myscript.sh` or sh `myscript.sh`.
+Otherwise you could call your script with `.myscript.sh` (assuming you've added the bash location in the shebang) or with the bash command directly with `bash myscript.sh`/`bash -e myscript.sh` or sh `myscript.sh`.
 
 Note: Of course, ending the file with ".sh" is optional.
