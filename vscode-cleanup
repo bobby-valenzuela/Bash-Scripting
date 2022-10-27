@@ -29,3 +29,6 @@ ps aux | grep vscode-server/bin | tr -s [:space:] | cut -d " " -f2 | xargs kill 
 echo "Processes removed - Cleanup Completed!"
 
 exit 0
+
+# Useful to run remotely on multiple machines
+# Example: ssh ubuntu@myhost 'bash -s' < vscode-cleanup
