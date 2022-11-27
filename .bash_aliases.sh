@@ -1,3 +1,4 @@
+# Some very handy aliases
 
 ## a quick way to get out of current directory ##
 alias ..='cd ..'

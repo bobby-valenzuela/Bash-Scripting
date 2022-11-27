@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
+# Git stash apply by name
+
+# Author : Bobby Valenzuela
+# Created : 11th June 2022
+# Last Modified : 11th June 2022
+
+# Description:
+# Apply a stash by the stash name 
+
+# Usage: gitapply mysavedstash
+
+
 stash_name="${1}"
 [[ "${stash_name}" == "" ]] && read -p "Enter the name of your stash: " stash_name
 

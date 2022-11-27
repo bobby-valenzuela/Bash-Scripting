@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
-# Simple random password generator
+# Git stash merge
 
 # Author : Bobby Valenzuela
 # Created : 11th June 2022
 # Last Modified : 11th June 2022
 
 # Description:
-# Merge local unstages changes with the changes in some stash by referencing the stash save name.
+# Merge all local changes with changes from another saved stash by referncing the stash name of the saved stash. 
+# This creates a new branch holding these changes.
 
 
 # Usage: ./git_merge_stash.sh

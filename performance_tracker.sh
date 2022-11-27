@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Vscode cleanup script controller
+
+# Author : Bobby Valenzuela
+# Created : 26th October 2022
+# Last Modified : 26th October 2022
+
+# Description:
+# Used to get general stats about a machine - very crude draft as of now...
+
+
 date >> performance.log
 
 ping -c 1 google.com &> /dev/null

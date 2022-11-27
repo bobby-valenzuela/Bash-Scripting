@@ -24,3 +24,5 @@ done
 
 # Add jokes into the csv
 echo -en "$output_csv" >> jokes.csv
+
+[[ -e ./jokes.csv ]] && [[ -s ./jokes.csv ]] && echo "Jokes Saved to a CSV!" || { echo "Jokes failed to save to a CSV :(" ; }

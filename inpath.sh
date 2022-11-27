@@ -1,5 +1,16 @@
 #!/bin/bash
+
+# in path
+
+# Author : Bobby Valenzuela
+# Created : 11th June 2022
+# Last Modified : 11th June 2022
+
+# Description:
 # inpath--Verifies that a specified program is either valid as is or can be found in the PATH directory list
+
+# Source: Used book "Wicked Cool Shell Scripts" as my template/basis for this scrpit
+
 
 # Define Functions
 in_path()

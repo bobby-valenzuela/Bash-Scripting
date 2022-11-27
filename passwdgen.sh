@@ -11,15 +11,17 @@
 
 # Usage: ./passwdgen.sh
 
+which openssl &> /dev/null || echo -e "openssl library is required. Please install.\nExiting..." && return 1
+
 printf "Welcome to the random password generator.\n\n"
 
 integertest='^[0-9]+$'
 
-# Enforce an integer check
+# Keep trying if we don't have an integer or we have one that's > 60 digits
 while [[ ! ( "$PASS_LEN" =~ $integertest ) || ( "${PASS_LEN}" -gt 60 ) ]]
 do
     # Add ability to exit program
-    [[ "${PASS_LEN}" = 'exit' ]] && exit 1;
+    [[ "${PASS_LEN}" = 'exit' ]] && exit 0;
 
     read -p "Password length (must be a digit): " PASS_LEN
 
@@ -34,8 +36,7 @@ echo
 for i in {1..4}
 do
 
-
-    # Generate ran num from 1 - 3 to determine where to start/end
+    # Generate rand num from 1 - 3 to determine where to start/end
     rand_offset=$(( ( $RANDOM % 3 ) + 1 ))
     end_offset=$(( ( $PASS_LEN + $rand_offset ) - 1 ))
 

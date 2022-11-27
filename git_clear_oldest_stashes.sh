@@ -1,5 +1,14 @@
 #! /bin/bash
+
+# Clear 10 oldest git stashes
+
+# Author : Bobby Valenzuela
+# Created : 11th June 2022
+# Last Modified : 11th June 2022
+
+# Description:
 # Clear stashes - keep latest 10
+
 
 current=10
 stash_count=$( (expr 0 + $( git stash list | wc -l ) ) )
