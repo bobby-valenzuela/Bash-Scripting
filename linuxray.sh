@@ -10,6 +10,8 @@
 # Scans for violations of security best practices and performance detriments.
 # Requires sudo privileges to run.
 
+# If not root or sudoer...
+{ [[ $(id -u) -eq 0 ]] || $(sudo -v &>/dev/null) ; } || { echo -e "Please run with sudo privileges.\nExiting..." ; exit 1 ; } 
 
 
 ## get top 5 process eating memory

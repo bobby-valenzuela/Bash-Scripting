@@ -1,6 +1,14 @@
 
 
 # **********************************************************
+#           USER PERMISSIONS
+# **********************************************************
+
+# Exit if not root or a sudoer
+{ [[ $(id -u) -eq 0 ]] || $(sudo -v &>/dev/null) ; } || { echo -e "Please run with sudo privileges.\nExiting..." ; exit 1 ; } 
+
+
+# **********************************************************
 #           FILE MANIPULATION
 # **********************************************************
 # Rename files (Add '.sh' extension)
