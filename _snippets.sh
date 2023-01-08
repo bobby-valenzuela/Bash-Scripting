@@ -66,7 +66,7 @@ print_colored()
 
     [[ -z "$1" ||  -z "$2" ]] && echo "Usage: print_colored <color> <text>" && exit 1
 
-    case "$1" in
+    case "$2" in
         "grey" | "GREY")        echo -e "\033[90m$2 \033[00m" ;;
         "red" | "RED")          echo -e "\033[91m$2 \033[00m" ;;
         "green" | "GREEN")      echo -e "\033[92m$2 \033[00m" ;;
