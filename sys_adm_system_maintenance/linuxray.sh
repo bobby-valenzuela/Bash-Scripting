@@ -13,16 +13,19 @@
 # If not root or sudoer...
 { [[ $(id -u) -eq 0 ]] || $(sudo -v &>/dev/null) ; } || { echo -e "Please run with sudo privileges.\nExiting..." ; exit 1 ; } 
 
+sudo su -
 
-## get top 5 process eating memory
+# get top 5 process eating memory
 ps auxf | sort -nr -k 4 | head -5
  
-## get top 5 process eating cpu ##
+# get top 5 process eating cpu ##
 ps auxf | sort -nr -k 3 | head -5
 
-## Update cache and upgrade binaries
-# sudo apt update
+# Update cache and (maybe?) upgrade binaries
+apt update 
 
+# kill any running processes pointing to deleted files
+lsof | grep -i deleted | tr -s [:space:] | cut -d ' ' -f 2 | xargs kill 
 
 
 
@@ -32,7 +35,6 @@ ps auxf | sort -nr -k 3 | head -5
 # Dangling link cleanup
 # old file archiver
 # integrity checker
-# kill processes pointing to deleted files (lsof) 
 # critical disk usage (show top three large files)
 # systemd-analyze blame (see which process tkes the longest to start pm boot)
 # Check for any soft links not using absolute paths pointing to destination
