@@ -29,6 +29,19 @@ even_or_odd()
     [[ $(( $1 % 2 )) == 0 ]] && echo "Even" || echo "Odd"
 }
 
+# Validate IP
+CNC_IP_SAVED=0
+
+while [[ ${CNC_IP_SAVED} -ne 1 ]] 
+do
+
+    read -p "Enter CNC server IP: " CNC_IP
+    [[ ${CNC_IP} =~ ([0-9]{1,3}\.){3}[0-9]{1,3} ]] && CNC_IP_SAVED=1
+
+done
+
+echo "Saved: ${CNC_IP}"
+
 
 
 
