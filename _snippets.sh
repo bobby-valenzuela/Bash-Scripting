@@ -31,6 +31,15 @@ even_or_odd()
 
 
 
+
+# **********************************************************
+#           PROGRAMS AND PACKAGES
+# **********************************************************
+
+# Determin whether we're using netstat vs ss
+using_netstat=$({ netstat --version &> /dev/null && echo 1 ; } || echo 0)
+
+
 # **********************************************************
 #           PRINTING AND FORMATTING
 # **********************************************************
