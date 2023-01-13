@@ -37,6 +37,9 @@ do
 
     read -p "Enter CNC server IP: " CNC_IP
     [[ ${CNC_IP} =~ ([0-9]{1,3}\.){3}[0-9]{1,3} ]] && CNC_IP_SAVED=1
+    
+    # Can also do ip and port 0.0.0.0:8080
+    # [[ ${CNC_IP} =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}\:[0-9]{1,4}$ ]] && CNC_IP_SAVED=1
 
 done
 
