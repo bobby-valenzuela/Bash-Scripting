@@ -30,3 +30,6 @@ alias upandup='sudo apt update && sudo apt upgrade'
 alias apachelogerr='tail -n15 -f /var/log/apache2/error.log'
 alias apachelogacc='tail -n15 -f /var/log/apache2/access.log'
 alias apacher='sudo service apache2 restart'
+
+## Git
+alias ssh-keyupdate="{ eval $(ssh-agent -s) ; } && ssh-add ~/.ssh/id_rsa"
