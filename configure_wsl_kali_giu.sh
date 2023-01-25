@@ -14,3 +14,6 @@ sudo apt install kali-win-kex -y
 
 # Start Kex (manually)
 # kex --win -s
+
+# This makes sure to start both server and client
+# kex --win --wtstart
