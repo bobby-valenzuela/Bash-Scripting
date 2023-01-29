@@ -40,6 +40,7 @@ lsof | grep -i deleted | tr -s [:space:] | cut -d ' ' -f 2 | xargs kill
 # Check for any soft links not using absolute paths pointing to destination
 # Check for any links
 # load average (lscpu to see num cores)
+# Clean Zombie processes
 # Security checks
   #  Prone to fork bomb?
   # mysql --version to see if mysql/maris db is enabled and port is open on 3306.
