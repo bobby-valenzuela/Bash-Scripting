@@ -100,6 +100,19 @@ prHeaderLeftThird(){
 
 }
 
+prHeaderLeftQuarter(){
+    for each in $(seq 1 $(($COLUMNS/4)))
+
+    do
+
+      echo -n $1
+
+    done
+
+    echo
+
+}
+
 prtxtCentre(){
 
 title=$1
