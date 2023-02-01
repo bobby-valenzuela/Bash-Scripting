@@ -74,6 +74,31 @@ prHeader(){
     done
 
 }
+prHeaderLeftHalf(){
+    for each in $(seq 1 $(($COLUMNS/2)))
+
+    do
+
+      echo -n $1
+
+    done
+
+    echo
+
+}
+
+prHeaderLeftThird(){
+    for each in $(seq 1 $(($COLUMNS/3)))
+
+    do
+
+      echo -n $1
+
+    done
+
+    echo
+
+}
 
 prtxtCentre(){
 
