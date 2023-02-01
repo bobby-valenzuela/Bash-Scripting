@@ -31,7 +31,7 @@ lsof | grep -i deleted | tr -s [:space:] | cut -d ' ' -f 2 | xargs kill
 
 #######  TODO ########
 
-
+# Make a systemd service of itself
 # Dangling link cleanup
 # old file archiver
 # integrity checker
