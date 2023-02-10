@@ -1,5 +1,19 @@
 #!/usr/bin/env bash
 
+
+# Git Get USer Stats
+
+# Author : Bobby Valenzuela
+# Created : 10th Jan 2022
+# Last Modified : 10th Jan 2022
+
+# Description:
+# Print out the number of lines changed and number of commits by user
+# In the script you can set the date range and dirs you want to check.
+# Prints out in month-by-month increments.
+
+
+
 # DEFINE WHICH MONTHS/YEARS TO CHECK
 # ranges=("2022-1" '2022-12' '2023-01')   # Specific months
 ranges=(2022-{01..12})                    # 2022 Full year (YYYY-MM)
