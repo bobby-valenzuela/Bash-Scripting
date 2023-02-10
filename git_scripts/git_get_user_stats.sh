@@ -53,7 +53,6 @@ do
 
     # Repos to check
     for path in ${repos[@]}
-    # for path in {www,www/Estimator,metabase-tools,biltong-server,scout,dropboxv2,internal-api,vccprograms}
     do
 
         cd ${path}
@@ -125,11 +124,13 @@ do
     done
     printf "\t==> [LineNumber Totals]\n"
 
-
+    # Get/print commit coonts for this date range
     for user in ${users[@]}
     do 
         usr_commit_count=${commit_counts["${range}-${user}"]}
         printf "${user}: ${usr_commit_count} | "
+        # Add to grand total while we're here
+        grand_totals["${user}-commits"]=$((${grand_totals["${user}-commits"]=0}+${usr_commit_count}))
     done
     echo -e '\t==> [Commit Totals]'
     printf "\n\n"
@@ -138,11 +139,23 @@ do
 done
 # END LOOP -> FINISHED GOING DATE RANGES
 
-
+# Print grand totals
 printf "=== Grand Totals ===\n"
+
 for user in ${users[@]}
 do 
-    printf "${user}: ${grand_totals[${user}]} | "
+    printf "${user}: ${grand_totals[${user}]} | "   # Line numbers
 done
+
+echo -e " ==> [LineNumber Totals]"
+
+# Commits
+for user in ${users[@]}
+do 
+    printf "${user}: ${grand_totals["${user}-commits"]}   | "
+done
+
+echo -e "\t ==> [Commit Totals]"
+
 echo
 echo
