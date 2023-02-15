@@ -150,3 +150,20 @@ print_colored()
 # Examples
 # print_colored 'red' 'my message'
 # print_colored 'red' 'my message\n\n' 'no'
+
+
+# **********************************************************
+#           PROCESSES AND SERVICES
+# **********************************************************
+
+# Check if a service/process is already running - if not start it up (checks every 60s)
+while :
+do
+
+    # Check if already running
+    already_running=$(ps aux | grep 'HiveAPI/index.pl' | awk '/perl/{ print $11 }' | xargs)
+
+    # Start if not already running
+    { [[ "${already_running,,}" =~ perl ]] && echo "Hive API Running" ; } || { echo "Not running. Starting Up...." && $(which perl) /home/control-io/www/HiveAPI/inde$
+    sleep 60
+done
