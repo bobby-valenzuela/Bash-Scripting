@@ -14,7 +14,12 @@
 # Rename files (Add '.sh' extension)
 find . -maxdepth 1 -type f -exec mv '{}' '{}.sh' \;
 
-
+# Cut file in half - keep the latter half.
+half_file(){
+    LINE_COUNT=$(wc -l ${1} 2> /dev/null | cut -d " " -f1)
+    LINE_COUNT_HALF=$((LINE_COUNT/2))
+    [[ ${LINE_COUNT_HALF} -gt 0 ]] && sed -in "1,${LINE_COUNT_HALF}d" ${1}
+}
 
 
 # **********************************************************
