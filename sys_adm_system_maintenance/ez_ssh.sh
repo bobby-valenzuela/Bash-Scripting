@@ -13,7 +13,7 @@ PS3="Which system would you like to connect to?: "
 COLUMNS=1
 select machine in $(awk '/^\s*Host\s/ { print $2 }' ~/.ssh/config | sort)
 do
-        echo "Selected ${machine}. Connecting..."
+        echo -e "\nSelected ${machine}. Connecting...\n"
         ssh $machine
         break
 done
