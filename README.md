@@ -1,6 +1,6 @@
 # Bashing
 
-A collection of some bash scripts I've created, tweaked, or compiled from various sources.
+A collection of some bash scripts I've created or tweaked.
 
 Note: A good source for these was the book "Wicked cool shell scripts [2nd edition] - no startch press 2017
 
